@@ -1,5 +1,5 @@
 ---
-title: "MY COURSE CODE - MY COURSE NAME"
+title: "Statistical workshop with R"
 format:
   html:
     include-before-body: helpers/remove-nav.html
@@ -26,6 +26,6 @@ format:
 **Select Academic Year/Term:**
 
 <a href="2023/index.qmd">
-    <button class="button-61">2022/23</button>
+    <button class="button-61">Res Meth 2023/2</button>
 </a>
 
