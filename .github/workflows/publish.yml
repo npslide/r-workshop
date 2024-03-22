@@ -22,7 +22,7 @@ jobs:
           use-public-rspm: true
 
       - name: Install rmarkdown
-        run: install.packages("rmarkdown");install.packages("ggplot2");install.packages("tidyverse")
+        run: install.packages("rmarkdown");install.packages("ggplot2");install.packages("tidyverse");install.packages("tidymodels")
         shell: Rscript {0}
 
       - name: Set up Quarto
