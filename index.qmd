@@ -1,5 +1,5 @@
 ---
-title: "Statistical workshop with R"
+title: "{{< var course_title >}}"
 format:
   html:
     include-before-body: helpers/remove-nav.html
@@ -25,7 +25,7 @@ format:
 
 **Select Academic Year/Term:**
 
-<a href="2023/index.qmd">
+<a href="2023-2/index.qmd">
     <button class="button-61">Res Meth 2023/2</button>
 </a>
 

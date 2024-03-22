@@ -1,14 +1,14 @@
 project:
   type: "website"
-  title: "R Statistical Workshop"
+  title: "{{< var course_title >}}"
   output-dir: _output
   render:
     - "index.qmd"
-    - "2023/*.qmd"
-    - "2023/weeks/week01/*.qmd"
+    - "2023-2/*.qmd"
+    - "2023-2/topics/*/*.qmd"
 
 website:
-  title: "R Statistical Workshop"
+  title: "{{< var course_title >}}"
   page-navigation: true
   reader-mode: true
   open-graph: true
@@ -22,7 +22,7 @@ website:
   sidebar:
     style: docked
     contents:
-      - href: 2023/index.qmd
+      - href: 2023-2/index.qmd
         text: "🏠 Home"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"
@@ -37,23 +37,38 @@ website:
       #       text: "📝 Assignment 02"
       #     - href: 2023/assignments/group_project.qmd
       #       text: "👥 Group Project"
-      - section: "🗓️ Weeks"
+      - section: "🗓️ Topics"
         contents:
-         - href: 2023/weeks/week01/page.qmd
-           text: Week 01
+         - href: "2023-2/topics/topic01/page.qmd"
+           text: "Topic 01"
            contents:
-             - href: 2023/weeks/week01/page.qmd
-               text: 👨‍🏫 Lecture Material
+             - href: "2023-2/topics/topic01/page.qmd"
+               text: 💻 Material
             #  - href: 2023/weeks/week01/lab.qmd
             #    text: 💻 Lab Roadmap
             #  - href: 2023/weeks/week01/appendix.qmd
             #    text: 🔖 Appendix
+         - href: "2023-2/topics/topic02/page.qmd"
+           text: "Topic 02"
+           contents:
+             - href: "2023-2/topics/topic02/page.qmd"
+               text: 💻 Material
+         - href: "2023-2/topics/topic03/page.qmd"
+           text: "Topic 03"
+           contents:
+             - href: "2023-2/topics/topic03/page.qmd"
+               text: 💻 Material
+         - href: "2023-2/topics/topic04/page.qmd"
+           text: "Topic 04"
+           contents:
+             - href: "2023-2/topics/topic04/page.qmd"
+               text: 💻 Material
 
   navbar:
     background: primary
   page-footer:
     background: light
-    left: "Copyright 2023, MY INSTITUTION" 
+    left: "Copyright 2023, Natapol Pornputtapong" 
 
 
 
@@ -63,8 +78,8 @@ csl: references/chicago-author-date.csl
 
 format:
   html:
-    author: Dr. [MY NAME](#)
-    author-meta: Dr. MY NAME
+    author: Natapol Pornputtapong, PhD.
+    author-meta: Natapol Pornputtapong, PhD.
     date-format: "DD MMMM YYYY"
 
     email-obfuscation: javascript
@@ -81,6 +96,6 @@ format:
       - css/syllabus.css
     toc: true
 
-#margin-header: |
-# ![](/figures/logos/MY_INSTITUTION.png)
+margin-header: |
+ ![](/figures/icons/s3bio.png)
 

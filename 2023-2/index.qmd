@@ -1,6 +1,6 @@
 ---
-title: "MY_COURSE_CODE - MY_COURSE_NAME"
-subtitle: "Academic Year: 2022/23"
+title: "{{< var course_title >}}"
+subtitle: "Academic Year: 2023/2"
 format: html
 ---
 
@@ -9,7 +9,7 @@ format: html
 
 (12/03/2023)
 
-- [🗓️ Week 01 lecture material](/2023/weeks/week01/page.qmd) is now available!
+- [🗓️ Week 01 lecture material](/2023-2/topics/topic01/page.qmd) is now available!
 
 :::
 
@@ -20,11 +20,11 @@ format: html
 ## Course Convenor
 
 
-![](/figures/people/professor_octopus.png){fig-align="left" fig-alt="Photo of Dr. MY NAME" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
-**[MY_NAME](#)** <br/>
-_MY_JOB_TITLE_ <br/>
-[MY_INSTITUTION](#)</a><br/>
-📧 [MY_EMAIL](mailto:)
+![](/figures/people/pornputtapong.jpg){fig-align="left" fig-alt="Photo of Dr. MY NAME" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
+**Natapol Pornputtapong** <br/>
+Lecturer <br/>
+Department of Biochemistry and Microbiology <br/> Faculty of Pharmaceutical Sciences<br/> Chulalongkorn University</a><br/>
+📧 [natapol.p@pharm.chula.ac.th](mailto:natapol.p@pharm.chula.ac.th)
 
 Office Hours: 
 
@@ -32,7 +32,7 @@ Office Hours:
 - Where:
 - How to book:
 
-## Teaching Staff
+<!-- ## Teaching Staff
 
 ![](/figures/people/ta_octopunian.png){fig-align="left" fig-alt="Photo of TA_NAME" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
 **[TA_NAME](#)** <br/>
@@ -42,16 +42,16 @@ PhD Candidate at PLACE <br>
 ![](/figures/people/ta_octopunian2.png){fig-align="left" fig-alt="Photo of TA_NAME" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}  
 **[TA_NAME](#)** <br/>
 PhD Candidate at PLACE <br> 
-📧 [EMAIL](mailto:)
+📧 [EMAIL](mailto:) -->
 
 
 :::
 
 # 📍 Lecture
 
-Fridays 2pm-4pm at PLACE
+Friday 13:00-17:00 at PLACE
 
-# 💻 Class Groups
+<!-- # 💻 Class Groups
 
 ::: {style="display:inline-block;width: 28.5%;border-style: dotted;border-width: 1px;border-color: &quot;#fefefe&quot;; margin:1%;padding:1.5%;background-color:#fafafa"}
 **Group 01**
@@ -80,4 +80,4 @@ Fridays 2pm-4pm at PLACE
 - ⌚ 16:00 - 17:30
 - 📍 
 - 🧑‍🏫 _TA_NAME_
-:::
+::: -->
