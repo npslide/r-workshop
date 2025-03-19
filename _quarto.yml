@@ -1,7 +1,7 @@
 project:
   type: "website"
   title: "{{< var course_title >}}"
-  output-dir: _output
+  output-dir: _site
   render:
     - "index.qmd"
     - "2023-2/*.qmd"
