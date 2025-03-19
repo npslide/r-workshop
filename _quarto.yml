@@ -4,8 +4,8 @@ project:
   output-dir: _site
   render:
     - "index.qmd"
-    - "2023-2/*.qmd"
-    - "2023-2/topics/*/*.qmd"
+    - "years/*/*.qmd"
+    - "years/*/topics/*/*.qmd"
 
 website:
   title: "{{< var course_title >}}"
@@ -22,7 +22,7 @@ website:
   sidebar:
     style: docked
     contents:
-      - href: 2023-2/index.qmd
+      - href: years/2023-2/index.qmd
         text: "🏠 Home"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"
@@ -39,36 +39,52 @@ website:
       #       text: "👥 Group Project"
       - section: "🗓️ Topics"
         contents:
-         - href: "2023-2/topics/topic01/page.qmd"
-           text: "Topic 01"
-           contents:
-             - href: "2023-2/topics/topic01/page.qmd"
-               text: 💻 Material
+        - href: "years/2023-2/topics/topic01/page.qmd"
+          text: "Topic 01"
+          contents:
+            - href: "years/2023-2/topics/topic01/page.qmd"
+              text: 💻 Material
             #  - href: 2023/weeks/week01/lab.qmd
             #    text: 💻 Lab Roadmap
             #  - href: 2023/weeks/week01/appendix.qmd
             #    text: 🔖 Appendix
-         - href: "2023-2/topics/topic02/page.qmd"
-           text: "Topic 02"
-           contents:
-             - href: "2023-2/topics/topic02/page.qmd"
-               text: 💻 Material
-         - href: "2023-2/topics/topic03/page.qmd"
-           text: "Topic 03"
-           contents:
-             - href: "2023-2/topics/topic03/page.qmd"
-               text: 💻 Material
-         - href: "2023-2/topics/topic04/page.qmd"
-           text: "Topic 04"
-           contents:
-             - href: "2023-2/topics/topic04/page.qmd"
-               text: 💻 Material
+        - href: "years/2023-2/topics/topic02/page.qmd"
+          text: "Topic 02"
+          contents:
+            - href: "years/2023-2/topics/topic02/page.qmd"
+              text: 💻 Material
+        - href: "years/2023-2/topics/topic03/page.qmd"
+          text: "Topic 03"
+          contents:
+            - href: "years/2023-2/topics/topic03/page.qmd"
+              text: 💻 Material
+        - href: "years/2023-2/topics/topic04/page.qmd"
+          text: "Topic 04"
+          contents:
+            - href: "years/2023-2/topics/topic04/page.qmd"
+              text: 💻 Material
+      - href: years/2024/index.qmd
+        text: "🏠 Home"
+      - section: "🗓️ Topics"
+        contents:
+        - href: "years/2024/topics/topic01/page.qmd"
+          text: "Topic 01"
+          contents:
+            - href: "years/2024/topics/topic01/page.qmd"
+              text: 💻 Material
+      - section: "🗓️ Topics"
+        contents:
+        - href: "years/2024/topics/topic02/page.qmd"
+          text: "Topic 02"
+          contents:
+            - href: "years/2024/topics/topic02/page.qmd"
+              text: 💻 Material
 
   navbar:
     background: primary
   page-footer:
     background: light
-    left: "Copyright 2023, Natapol Pornputtapong" 
+    left: "Copyright 2025, Natapol Pornputtapong" 
 
 
 
