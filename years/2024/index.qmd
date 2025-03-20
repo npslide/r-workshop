@@ -1,15 +1,15 @@
 ---
 title: "{{< var course_title >}}"
-subtitle: "Academic Year: 2023/2"
+subtitle: "Academic Year: 2024"
 format: html
 ---
 
 ::: {.callout-important collapse=false}
 ## 📢 Important
 
-(12/03/2023)
+(19/03/2025)
 
-- [🗓️ Week 01 lecture material](/2023-2/topics/topic01/page.qmd) is now available!
+- [🗓️ Topic 01 lecture material](/years/2024/topics/topic01/page.qmd) is now available!
 
 :::
 

@@ -14,8 +14,8 @@ table.syllabus tbody tr.even:last-child {
 }
 
 table.syllabus tr.odd {
-  background-color: var(--bs-blue);
-  color: var(--bs-white);
+    background-color: var(--bs-blue);
+    color: var(--bs-white);
 }
 
 details.special {

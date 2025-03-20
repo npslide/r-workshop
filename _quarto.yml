@@ -23,7 +23,7 @@ website:
     style: docked
     contents:
       - href: years/2023-2/index.qmd
-        text: "🏠 Home"
+        text: "🏠 2023-2"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"
       # - href: 2023/communication.qmd
@@ -64,7 +64,7 @@ website:
             - href: "years/2023-2/topics/topic04/page.qmd"
               text: 💻 Material
       - href: years/2024/index.qmd
-        text: "🏠 Home"
+        text: "🏠 2024"
       - section: "🗓️ Topics"
         contents:
         - href: "years/2024/topics/topic01/page.qmd"
@@ -72,8 +72,6 @@ website:
           contents:
             - href: "years/2024/topics/topic01/page.qmd"
               text: 💻 Material
-      - section: "🗓️ Topics"
-        contents:
         - href: "years/2024/topics/topic02/page.qmd"
           text: "Topic 02"
           contents:
