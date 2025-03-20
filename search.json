@@ -1,211 +1,239 @@
 [
   {
+    "objectID": "years/2024/topics/topic02/slides.html#statistics",
+    "href": "years/2024/topics/topic02/slides.html#statistics",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Statistics 1",
+    "text": "Statistics 1\ndiscipline that concerns the collection, organization, analysis, interpretation and presentation of data\nWikipedia; Romijn, Jan-Willem (2014). “Philosophy of statistics”. Stanford Encyclopedia of Philosophy."
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#statistic-tools-family",
+    "href": "years/2024/topics/topic02/slides.html#statistic-tools-family",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Statistic tools Family",
+    "text": "Statistic tools Family\n\ngraph TD\n  A[Statistics] --&gt; B[Descriptive]\n  A --&gt; C[Inferential]\n  A --&gt; D[Bayesian]\n  A --&gt; E[Statistical learning]\n  \n  B --&gt; F[Central tendency]\n  B --&gt; G[Distribution]\n  B --&gt; H[Plot]\n\n  C --&gt; I[T-test]\n  C --&gt; J[ANOVA]\n\n  E --&gt; K[AI]\n  E --&gt; L[NN]\n\n\n\n\ngraph TD\n  A[Statistics] --&gt; B[Descriptive]\n  A --&gt; C[Inferential]\n  A --&gt; D[Bayesian]\n  A --&gt; E[Statistical learning]\n  \n  B --&gt; F[Central tendency]\n  B --&gt; G[Distribution]\n  B --&gt; H[Plot]\n\n  C --&gt; I[T-test]\n  C --&gt; J[ANOVA]\n\n  E --&gt; K[AI]\n  E --&gt; L[NN]"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#drug-testing",
+    "href": "years/2024/topics/topic02/slides.html#drug-testing",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Drug testing",
+    "text": "Drug testing\n\n2 new pain killer, test in 10 persons that have pain.\n\nA: 8 of 10 get better.\nB: 9 of 10 get better.\n\n2 new pain killer, test in 100 persons that have pain.\n\nA: 70 of 100 get better.\nB: 79 of 100 get better."
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#statistical-inference",
+    "href": "years/2024/topics/topic02/slides.html#statistical-inference",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Statistical inference",
+    "text": "Statistical inference\n\n\n{{&lt; fa magnifying-glass size=2x &gt;}}\nObserve  Sample\n\n\n{{&lt; fa arrow-right size=2x &gt;}}\n\n\n{{&lt; fa mortar-pestle size=2x &gt;}}\nInfer  Population"
+  },
+  {
     "objectID": "years/2024/topics/topic02/slides.html#library-installation",
     "href": "years/2024/topics/topic02/slides.html#library-installation",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "library installation",
     "text": "library installation\n\ntidyverse\n\ntibble\ntribble\nreadr\ntidyr\ndplyr\n…\n\ntidymodels\n\ninfer\n\n\n\ninstall.packages(\"tidyverse\")\ninstall.packages(\"tidymodels\")"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#calling-library",
     "href": "years/2024/topics/topic02/slides.html#calling-library",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "calling library",
     "text": "calling library\n\n\nShow the code\nlibrary(tidyverse)\nlibrary(tidymodels)"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#the-nhanes-data",
     "href": "years/2024/topics/topic02/slides.html#the-nhanes-data",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "The NHANES data",
     "text": "The NHANES data\n\n\n\n\n\n\n\nVariable\nDefinition\n\n\n\n\nid\nA unique sample identifier\n\n\nGender\nGender (sex) of study participant coded as male or female\n\n\nAge\nAge in years at screening of study participant. Note: Subjects 80 years or older were recorded as 80.\n\n\nRace\nReported race of study participant, including non-Hispanic Asian category: Mexican, Hispanic, White, Black, Asian, or Other. Not availale for 2009-10.\n\n\nEducation\nEducational level of study participant Reported for participants aged 20 years or older. One of 8thGrade, 9-11thGrade, HighSchool, SomeCollege, or CollegeGrad.\n\n\nMaritalStatus\nMarital status of study participant. Reported for participants aged 20 years or older. One of Married, Widowed, Divorced, Separated, NeverMarried, or LivePartner (living with partner).\n\n\nRelationshipStatus\nSimplification of MaritalStatus, coded as Committed if MaritalStatus is Married or LivePartner, and Single otherwise.\n\n\nInsured\nIndicates whether the individual is covered by health insurance.\n\n\nIncome\nNumerical version of HHIncome derived from the middle income in each category\n\n\nPoverty\nA ratio of family income to poverty guidelines. Smaller numbers indicate more poverty\n\n\nHomeRooms\nHow many rooms are in home of study participant (counting kitchen but not bathroom). 13 rooms = 13 or more rooms.\n\n\nHomeOwn\nOne of Home, Rent, or Other indicating whether the home of study participant or someone in their family is owned, rented or occupied by some other arrangement.\n\n\nWork\nIndicates whether the individual is current working or not.\n\n\nWeight\nWeight in kg\n\n\nHeight\nStanding height in cm. Reported for participants aged 2 years or older.\n\n\nBMI\nBody mass index (weight/height2 in kg/m2). Reported for participants aged 2 years or older.\n\n\nPulse\n60 second pulse rate\n\n\nBPSys\nCombined systolic blood pressure reading, following the procedure outlined for BPXSAR.\n\n\nBPDia\nCombined diastolic blood pressure reading, following the procedure outlined for BPXDAR.\n\n\nTestosterone\nTesterone total (ng/dL). Reported for participants aged 6 years or older. Not available for 2009-2010.\n\n\nHDLChol\nDirect HDL cholesterol in mmol/L. Reported for participants aged 6 years or older.\n\n\nTotChol\nTotal HDL cholesterol in mmol/L. Reported for participants aged 6 years or older.\n\n\nDiabetes\nStudy participant told by a doctor or health professional that they have diabetes. Reported for participants aged 1 year or older as Yes or No.\n\n\nDiabetesAge\nAge of study participant when first told they had diabetes. Reported for participants aged 1 year or older.\n\n\nnPregnancies\nHow many times participant has been pregnant. Reported for female participants aged 20 years or older.\n\n\nnBabies\nHow many of participants deliveries resulted in live births. Reported for female participants aged 20 years or older.\n\n\nSleepHrsNight\nSelf-reported number of hours study participant usually gets at night on weekdays or workdays. Reported for participants aged 16 years and older.\n\n\nPhysActive\nParticipant does moderate or vigorous-intensity sports, fitness or recreational activities (Yes or No). Reported for participants 12 years or older.\n\n\nPhysActiveDays\nNumber of days in a typical week that participant does moderate or vigorous-intensity activity. Reported for participants 12 years or older.\n\n\nAlcoholDay\nAverage number of drinks consumed on days that participant drank alcoholic beverages. Reported for participants aged 18 years or older.\n\n\nAlcoholYear\nEstimated number of days over the past year that participant drank alcoholic beverages. Reported for participants aged 18 years or older.\n\n\nSmokingStatus\nSmoking status: Current Former or Never."
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#import-data-to-tibbles",
     "href": "years/2024/topics/topic02/slides.html#import-data-to-tibbles",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "import data to tibbles",
     "text": "import data to tibbles\n\nnh &lt;- read_csv(file=\"nhanes.csv\")\nnh\n\n# A tibble: 5,000 × 32\n      id Gender   Age Race    Education MaritalStatus RelationshipStatus Insured\n   &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;         &lt;chr&gt;              &lt;chr&gt;  \n 1 62163 male      14 Asian   &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n 2 62172 female    43 Black   High Sch… NeverMarried  Single             Yes    \n 3 62174 male      80 White   College … Married       Committed          Yes    \n 4 62174 male      80 White   College … Married       Committed          Yes    \n 5 62175 male       5 White   &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n 6 62176 female    34 White   College … Married       Committed          Yes    \n 7 62178 male      80 White   High Sch… Widowed       Single             Yes    \n 8 62180 male      35 White   College … Married       Committed          Yes    \n 9 62186 female    17 Black   &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n10 62190 female    15 Mexican &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n# ℹ 4,990 more rows\n# ℹ 24 more variables: Income &lt;dbl&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;dbl&gt;,\n#   HomeOwn &lt;chr&gt;, Work &lt;chr&gt;, Weight &lt;dbl&gt;, Height &lt;dbl&gt;, BMI &lt;dbl&gt;,\n#   Pulse &lt;dbl&gt;, BPSys &lt;dbl&gt;, BPDia &lt;dbl&gt;, Testosterone &lt;dbl&gt;, HDLChol &lt;dbl&gt;,\n#   TotChol &lt;dbl&gt;, Diabetes &lt;chr&gt;, DiabetesAge &lt;dbl&gt;, nPregnancies &lt;dbl&gt;,\n#   nBabies &lt;dbl&gt;, SleepHrsNight &lt;dbl&gt;, PhysActive &lt;chr&gt;, PhysActiveDays &lt;dbl&gt;,\n#   AlcoholDay &lt;dbl&gt;, AlcoholYear &lt;dbl&gt;, SmokingStatus &lt;chr&gt;"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#view-tibbles",
     "href": "years/2024/topics/topic02/slides.html#view-tibbles",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "view tibbles",
     "text": "view tibbles\n\nView(nh)"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#normality-test-shapiro-wilk-test-of-normality",
     "href": "years/2024/topics/topic02/slides.html#normality-test-shapiro-wilk-test-of-normality",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "normality test: Shapiro-Wilk test of normality",
     "text": "normality test: Shapiro-Wilk test of normality\n\\[ H_0 : data distribution = normal distribution \\] \\[ H_1 : data distribution \\neq normal distribution \\]\n\nnh %&gt;% \n  filter(Diabetes==\"Yes\") %&gt;% \n  .$BMI  %&gt;% \n  shapiro.test\n\n\n    Shapiro-Wilk normality test\n\ndata:  .\nW = 0.96682, p-value = 2.166e-07"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#bartlett-test-of-homogeneity-of-variances",
     "href": "years/2024/topics/topic02/slides.html#bartlett-test-of-homogeneity-of-variances",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Bartlett Test of Homogeneity of Variances",
     "text": "Bartlett Test of Homogeneity of Variances\n\\[ H_0 : Var_{diabetes} = Var_{nondiabetes} \\] \\[ H_1 : Var_{diabetes} \\neq Var_{nondiabetes} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  bartlett.test(BMI~Diabetes, data=.)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  BMI by Diabetes\nBartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#one-sample-t-test",
     "href": "years/2024/topics/topic02/slides.html#one-sample-t-test",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "one sample T Test",
     "text": "one sample T Test\n\\[ H_0 : \\mu_{BMI_{diabetic}} = 25 \\] \\[ H_1 : \\mu_{BMI_{diabetic}} \\neq 25 \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(response = BMI, mu = 25)\n\n# A tibble: 1 × 7\n  statistic  t_df   p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1      32.8  3675 3.85e-207 two.sided       28.5     28.3     28.8"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#one-sample-t-test-inferiority-test",
     "href": "years/2024/topics/topic02/slides.html#one-sample-t-test-inferiority-test",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "one sample T Test: inferiority test",
     "text": "one sample T Test: inferiority test\n\\[ H_0 : \\mu_{BMI_{diabetic}} \\geq 25 \\] \\[ H_1 : \\mu_{BMI_{diabetic}} &lt; 25 \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(response = BMI, mu = 25, alternative = \"less\")\n\n# A tibble: 1 × 7\n  statistic  t_df p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1      32.8  3675       1 less            28.5     -Inf     28.7"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#one-sample-t-test-superiority-test",
     "href": "years/2024/topics/topic02/slides.html#one-sample-t-test-superiority-test",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "one sample T Test: superiority test",
     "text": "one sample T Test: superiority test\n\\[ H_0 : \\mu_{BMI_{diabetic}} \\leq 25 \\] \\[ H_1 : \\mu_{BMI_{diabetic}} &gt; 25 \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(response = BMI, mu = 25, alternative = \"greater\")\n\n# A tibble: 1 × 7\n  statistic  t_df   p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1      32.8  3675 1.92e-207 greater         28.5     28.4      Inf"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#two-sample-t-test-equal-variance-two-tail",
     "href": "years/2024/topics/topic02/slides.html#two-sample-t-test-equal-variance-two-tail",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "two sample T Test: equal variance, two-tail",
     "text": "two sample T Test: equal variance, two-tail\n\\[ H_0 : \\mu_{BMI_{diabetic}} = \\mu_{BMI_{nondiabetic}} \\] \\[ H_1 : \\mu_{BMI_{diabetic}} \\neq \\mu_{BMI_{nondiabetic}} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(formula = BMI~Diabetes, , var.equal=TRUE)\n\n# A tibble: 1 × 7\n  statistic  t_df  p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1     -13.3  3674 2.88e-39 two.sided      -4.74    -5.45    -4.04"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#two-sample-t-test-not-equal-variance-two-tail",
     "href": "years/2024/topics/topic02/slides.html#two-sample-t-test-not-equal-variance-two-tail",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "two sample T Test: not equal variance, two-tail",
     "text": "two sample T Test: not equal variance, two-tail\n\\[ H_0 : \\mu_{BMI_{diabetic}} = \\mu_{BMI_{nondiabetic}} \\] \\[ H_1 : \\mu_{BMI_{diabetic}} \\neq \\mu_{BMI_{nondiabetic}} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(formula = BMI~Diabetes, , var.equal=FALSE)\n\n# A tibble: 1 × 7\n  statistic  t_df  p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1     -11.4  407. 3.08e-26 two.sided      -4.74    -5.56    -3.92"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#two-sample-t-test-not-equal-variance-one-tail",
     "href": "years/2024/topics/topic02/slides.html#two-sample-t-test-not-equal-variance-one-tail",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "two sample T Test: not equal variance, one-tail",
     "text": "two sample T Test: not equal variance, one-tail\n\\[ H_0 : \\mu_{BMI_{diabetic}} \\leq \\mu_{BMI_{nondiabetic}} \\] \\[ H_1 : \\mu_{BMI_{diabetic}} &gt; \\mu_{BMI_{nondiabetic}} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(\n    formula = BMI~Diabetes, \n    alternative=\"greater\", \n    order = c(\"Yes\", \"No\"),\n    var.equal=FALSE\n  )\n\n# A tibble: 1 × 7\n  statistic  t_df  p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1      11.4  407. 1.54e-26 greater         4.74     4.06      Inf"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#wilcoxon-rank-sum-test-a.k.a.-mann-whitney-u-test",
     "href": "years/2024/topics/topic02/slides.html#wilcoxon-rank-sum-test-a.k.a.-mann-whitney-u-test",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Wilcoxon rank-sum test (a.k.a. Mann-Whitney U test)",
     "text": "Wilcoxon rank-sum test (a.k.a. Mann-Whitney U test)\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  wilcox.test(BMI~Diabetes, data=.)\n\n\n    Wilcoxon rank sum test with continuity correction\n\ndata:  BMI by Diabetes\nW = 366959, p-value &lt; 2.2e-16\nalternative hypothesis: true location shift is not equal to 0"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#comparing-bmi-among-race",
     "href": "years/2024/topics/topic02/slides.html#comparing-bmi-among-race",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "comparing BMI among Race",
     "text": "comparing BMI among Race\n\nnh$Race %&gt;% unique\n\n[1] \"Asian\"    \"Black\"    \"White\"    \"Mexican\"  \"Hispanic\" \"Other\""
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#preparing-data",
     "href": "years/2024/topics/topic02/slides.html#preparing-data",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "preparing data",
     "text": "preparing data\n\nnhaov &lt;- nh %&gt;% \n  filter(Race!=\"Other\" & !is.na(Diabetes) & !is.na(BMI)) %&gt;% \n  mutate(\n    Race = factor(\n      Race, \n      labels = c(\"Asian\", \"Black\", \"White\", \"Mexican\", \"Hispanic\")\n    ),\n    Diabetes = factor(\n      Diabetes, \n      labels = c(\"Yes\", \"No\")\n    )\n  )\nnhaov\n\n# A tibble: 4,681 × 32\n      id Gender   Age Race    Education MaritalStatus RelationshipStatus Insured\n   &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;fct&gt;   &lt;chr&gt;     &lt;chr&gt;         &lt;chr&gt;              &lt;chr&gt;  \n 1 62163 male      14 Asian   &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n 2 62172 female    43 Black   High Sch… NeverMarried  Single             Yes    \n 3 62174 male      80 Hispan… College … Married       Committed          Yes    \n 4 62174 male      80 Hispan… College … Married       Committed          Yes    \n 5 62175 male       5 Hispan… &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n 6 62176 female    34 Hispan… College … Married       Committed          Yes    \n 7 62178 male      80 Hispan… High Sch… Widowed       Single             Yes    \n 8 62180 male      35 Hispan… College … Married       Committed          Yes    \n 9 62186 female    17 Black   &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n10 62190 female    15 Mexican &lt;NA&gt;      &lt;NA&gt;          &lt;NA&gt;               Yes    \n# ℹ 4,671 more rows\n# ℹ 24 more variables: Income &lt;dbl&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;dbl&gt;,\n#   HomeOwn &lt;chr&gt;, Work &lt;chr&gt;, Weight &lt;dbl&gt;, Height &lt;dbl&gt;, BMI &lt;dbl&gt;,\n#   Pulse &lt;dbl&gt;, BPSys &lt;dbl&gt;, BPDia &lt;dbl&gt;, Testosterone &lt;dbl&gt;, HDLChol &lt;dbl&gt;,\n#   TotChol &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;dbl&gt;, nPregnancies &lt;dbl&gt;,\n#   nBabies &lt;dbl&gt;, SleepHrsNight &lt;dbl&gt;, PhysActive &lt;chr&gt;, PhysActiveDays &lt;dbl&gt;,\n#   AlcoholDay &lt;dbl&gt;, AlcoholYear &lt;dbl&gt;, SmokingStatus &lt;chr&gt;"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#box-plot",
     "href": "years/2024/topics/topic02/slides.html#box-plot",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "box plot",
     "text": "box plot\n\nnhaov  %&gt;% ggplot(data = ., # add the data\n       aes(x = Race, y = BMI, # set x, y coordinates\n           color = Race)) +    # color by treatment\n  geom_boxplot() +\n  facet_grid(~Diabetes) # create panes base on health status"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#summarize-by-group",
     "href": "years/2024/topics/topic02/slides.html#summarize-by-group",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "summarize by group",
     "text": "summarize by group\n\nnhaov %&gt;%   \n  group_by(Race, Diabetes) %&gt;%  \n  summarize(mean = mean(BMI)) %&gt;%\n  ungroup()\n\n# A tibble: 10 × 3\n   Race     Diabetes  mean\n   &lt;fct&gt;    &lt;fct&gt;    &lt;dbl&gt;\n 1 Asian    Yes       23.1\n 2 Asian    No        29.6\n 3 Black    Yes       26.7\n 4 Black    No        34.2\n 5 White    Yes       25.5\n 6 White    No        31.2\n 7 Mexican  Yes       25.7\n 8 Mexican  No        33.1\n 9 Hispanic Yes       26.2\n10 Hispanic No        32.4"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#analysis-of-varience",
     "href": "years/2024/topics/topic02/slides.html#analysis-of-varience",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Analysis of Varience",
     "text": "Analysis of Varience\n\\[ H_0 : \\mu_{BMI_{Asian}} = \\mu_{BMI_{Black}} = \\mu_{BMI_{White}} = \\mu_{BMI_{Mexican}} = \\mu_{BMI_{Hispanic}} \\]\n\nnhaov %&gt;% \n  aov(BMI~Race, data=. ) %&gt;%\n  summary\n\n              Df Sum Sq Mean Sq F value  Pr(&gt;F)    \nRace           4   3073   768.2   14.77 5.4e-12 ***\nResiduals   4676 243242    52.0                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#post-hoc",
     "href": "years/2024/topics/topic02/slides.html#post-hoc",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Post-hoc",
     "text": "Post-hoc\n\nnhaov %&gt;% \n  aov(BMI~Race, data=. ) %&gt;%\n  TukeyHSD(which=\"Race\")\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = BMI ~ Race, data = .)\n\n$Race\n                       diff        lwr         upr     p adj\nBlack-Asian       3.9219759  2.4796138  5.36433804 0.0000000\nWhite-Asian       2.3466776  0.7536502  3.93970506 0.0005662\nMexican-Asian     2.4801524  0.9783435  3.98196129 0.0000662\nHispanic-Asian    2.9519888  1.7168031  4.18717442 0.0000000\nWhite-Black      -1.5752983 -2.9248493 -0.22574724 0.0126602\nMexican-Black    -1.4418235 -2.6823805 -0.20126654 0.0132408\nHispanic-Black   -0.9699871 -1.8695622 -0.07041211 0.0270928\nMexican-White     0.1334748 -1.2794334  1.54638289 0.9990295\nHispanic-White    0.6053111 -0.5201057  1.73072795 0.5836171\nHispanic-Mexican  0.4718364 -0.5202607  1.46393347 0.6925947"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#tidy-post-hoc",
     "href": "years/2024/topics/topic02/slides.html#tidy-post-hoc",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "tidy Post-hoc",
     "text": "tidy Post-hoc\n\nnhaov %&gt;% \n  aov(BMI~Race, data=. ) %&gt;%\n  TukeyHSD(which=\"Race\") %&gt;%\n  tidy\n\n# A tibble: 10 × 7\n   term  contrast         null.value estimate conf.low conf.high  adj.p.value\n   &lt;chr&gt; &lt;chr&gt;                 &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;\n 1 Race  Black-Asian               0    3.92     2.48     5.36   0.0000000374\n 2 Race  White-Asian               0    2.35     0.754    3.94   0.000566    \n 3 Race  Mexican-Asian             0    2.48     0.978    3.98   0.0000662   \n 4 Race  Hispanic-Asian            0    2.95     1.72     4.19   0.0000000382\n 5 Race  White-Black               0   -1.58    -2.92    -0.226  0.0127      \n 6 Race  Mexican-Black             0   -1.44    -2.68    -0.201  0.0132      \n 7 Race  Hispanic-Black            0   -0.970   -1.87    -0.0704 0.0271      \n 8 Race  Mexican-White             0    0.133   -1.28     1.55   0.999       \n 9 Race  Hispanic-White            0    0.605   -0.520    1.73   0.584       \n10 Race  Hispanic-Mexican          0    0.472   -0.520    1.46   0.693"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#model",
     "href": "years/2024/topics/topic02/slides.html#model",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Model",
     "text": "Model\n\\[ BMI = \\beta_0 + \\beta_1 Age \\]"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#assumptions",
     "href": "years/2024/topics/topic02/slides.html#assumptions",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Assumptions",
     "text": "Assumptions\n\nNon-linearity\nHeteroscedasticity\nOutlier values\nNormality of residuals"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#non-linearity",
     "href": "years/2024/topics/topic02/slides.html#non-linearity",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Non-linearity",
     "text": "Non-linearity"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#heteroscedasticity",
     "href": "years/2024/topics/topic02/slides.html#heteroscedasticity",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Heteroscedasticity",
     "text": "Heteroscedasticity"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#normality-of-residuals",
     "href": "years/2024/topics/topic02/slides.html#normality-of-residuals",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Normality of residuals",
     "text": "Normality of residuals"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#plot",
     "href": "years/2024/topics/topic02/slides.html#plot",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "plot",
     "text": "plot\n\nnh %&gt;%\n  ggplot(aes(BMI, Age)) + \n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#fitting",
     "href": "years/2024/topics/topic02/slides.html#fitting",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Fitting",
     "text": "Fitting\n\nnh %&gt;% \n  lm(BMI~Age , data=.) %&gt;% \n  summary\n\n\nCall:\nlm(formula = BMI ~ Age, data = .)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-16.675  -4.742  -1.277   3.419  55.915 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21.189645   0.187625  112.94   &lt;2e-16 ***\nAge          0.139813   0.004307   32.46   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.596 on 4832 degrees of freedom\n  (166 observations deleted due to missingness)\nMultiple R-squared:  0.179, Adjusted R-squared:  0.1789 \nF-statistic:  1054 on 1 and 4832 DF,  p-value: &lt; 2.2e-16"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#model-diagnostics",
     "href": "years/2024/topics/topic02/slides.html#model-diagnostics",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "Model Diagnostics",
     "text": "Model Diagnostics\n\npar(mfrow = c(2, 2))\n\nnh %&gt;% lm(BMI~Age , data=.) %&gt;% plot"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#references",
     "href": "years/2024/topics/topic02/slides.html#references",
-    "title": "Inferential statistics",
+    "title": "Inferential statistics (Statistical Testing)",
     "section": "References",
     "text": "References\n\nhttps://sparkbyexamples.com/r-programming/select-rows-in-r/\nhttps://4va.github.io/biodatasci/\nhttps://bioconnector.github.io/"
   },
@@ -1194,9 +1222,9 @@
     "href": "years/2024/index.html",
     "title": "Statistical workshop with R",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(12/03/2023)\n\n🗓️ Week 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Our Team\n\nCourse Convenor\n\n\n\nNatapol Pornputtapong  Lecturer  Department of Biochemistry and Microbiology  Faculty of Pharmaceutical Sciences Chulalongkorn University 📧 natapol.p at pharm dot chula dot ac dot th\nOffice Hours:\n\nWhen:\nWhere:\nHow to book:\n\n\n\n\n\n\n\n📍 Lecture\nFriday 13:00-17:00 at PLACE",
+    "text": "📢 Important\n\n\n\n\n\n(19/03/2025)\n\n🗓️ Topic 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Our Team\n\nCourse Convenor\n\n\n\nNatapol Pornputtapong  Lecturer  Department of Biochemistry and Microbiology  Faculty of Pharmaceutical Sciences Chulalongkorn University 📧 natapol.p at pharm dot chula dot ac dot th\nOffice Hours:\n\nWhen:\nWhere:\nHow to book:\n\n\n\n\n\n\n\n📍 Lecture\nFriday 13:00-17:00 at PLACE",
     "crumbs": [
-      "🏠 Home"
+      "🏠 2024"
     ]
   },
   {
@@ -1204,7 +1232,7 @@
     "href": "index.html",
     "title": "Statistical workshop with R",
     "section": "",
-    "text": "📑 Course Brief\nFocus: the focus of this course is to learn stuff\nHow: hands-on learning\n\n\n🎯 Learning Objectives\n\nYou will discover how to do X\nDistinguish X from X\nPractice how to put things in italic\nDiscover how to highlight code inline\nProceed to learn stuff\n\n\nSelect Academic Year/Term:\n Res Meth 2023/2"
+    "text": "📑 Course Brief\nFocus: the focus of this course is to learn stuff\nHow: hands-on learning\n\n\n🎯 Learning Objectives\n\nYou will discover how to do X\nDistinguish X from X\nPractice how to put things in italic\nDiscover how to highlight code inline\nProceed to learn stuff\n\n\nSelect Academic Year/Term:\n Res Meth 2023/2 \n Res Meth 2024"
   },
   {
     "objectID": "years/2023-2/index.html",
@@ -1213,7 +1241,7 @@
     "section": "",
     "text": "📢 Important\n\n\n\n\n\n(12/03/2023)\n\n🗓️ Week 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Our Team\n\nCourse Convenor\n\n\n\nNatapol Pornputtapong  Lecturer  Department of Biochemistry and Microbiology  Faculty of Pharmaceutical Sciences Chulalongkorn University 📧 natapol.p at pharm dot chula dot ac dot th\nOffice Hours:\n\nWhen:\nWhere:\nHow to book:\n\n\n\n\n\n\n\n📍 Lecture\nFriday 13:00-17:00 at PLACE",
     "crumbs": [
-      "🏠 Home"
+      "🏠 2023-2"
     ]
   },
   {
@@ -1494,7 +1522,7 @@
   {
     "objectID": "years/2024/topics/topic02/page.html",
     "href": "years/2024/topics/topic02/page.html",
-    "title": "🗓️ Topic 04 - Inferential Statistics",
+    "title": "🗓️ Topic 02 - Inferential Statistics (Statistical Testing)",
     "section": "",
     "text": "In this first week, we will cover what you can expect to learn from this course and the course logistics: all you need to know about the structure of the lectures, classes, assessments, and how we will interact throughout this course.",
     "crumbs": [
@@ -1505,7 +1533,7 @@
   {
     "objectID": "years/2024/topics/topic02/page.html#lecture-slides",
     "href": "years/2024/topics/topic02/page.html#lecture-slides",
-    "title": "🗓️ Topic 04 - Inferential Statistics",
+    "title": "🗓️ Topic 02 - Inferential Statistics (Statistical Testing)",
     "section": "👨‍🏫 Lecture Slides",
     "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle.",
     "crumbs": [
@@ -1516,7 +1544,7 @@
   {
     "objectID": "years/2024/topics/topic02/page.html#coursework",
     "href": "years/2024/topics/topic02/page.html#coursework",
-    "title": "🗓️ Topic 04 - Inferential Statistics",
+    "title": "🗓️ Topic 02 - Inferential Statistics (Statistical Testing)",
     "section": "✍️ Coursework",
     "text": "✍️ Coursework\n🚧 Come back after the lecture to read the coursework instructions for the week 🚧",
     "crumbs": [
@@ -1527,7 +1555,7 @@
   {
     "objectID": "years/2024/topics/topic02/page.html#recommended-reading",
     "href": "years/2024/topics/topic02/page.html#recommended-reading",
-    "title": "🗓️ Topic 04 - Inferential Statistics",
+    "title": "🗓️ Topic 02 - Inferential Statistics (Statistical Testing)",
     "section": "📚 Recommended Reading",
     "text": "📚 Recommended Reading\n\nCheck the end of slides for the list of references cited in the lecture.",
     "crumbs": [
@@ -1538,7 +1566,7 @@
   {
     "objectID": "years/2024/topics/topic02/page.html#communication",
     "href": "years/2024/topics/topic02/page.html#communication",
-    "title": "🗓️ Topic 04 - Inferential Statistics",
+    "title": "🗓️ Topic 02 - Inferential Statistics (Statistical Testing)",
     "section": "📟 Communication",
     "text": "📟 Communication\n\nIf you feel like it, introduce yourself in the #introductions channel on Slack",
     "crumbs": [
