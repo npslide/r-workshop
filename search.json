@@ -11,7 +11,7 @@
     "href": "years/2024/topics/topic02/slides.html#statistic-tools-family",
     "title": "Inferential statistics (Statistical Testing)",
     "section": "Statistic tools Family",
-    "text": "Statistic tools Family\n\ngraph TD\n  A[Statistics] --&gt; B[Descriptive]\n  A --&gt; C[Inferential]\n  A --&gt; D[Bayesian]\n  A --&gt; E[Statistical learning]\n  \n  B --&gt; F[Central tendency]\n  B --&gt; G[Distribution]\n  B --&gt; H[Plot]\n\n  C --&gt; I[T-test]\n  C --&gt; J[ANOVA]\n\n  E --&gt; K[AI]\n  E --&gt; L[NN]\n\n\n\n\ngraph TD\n  A[Statistics] --&gt; B[Descriptive]\n  A --&gt; C[Inferential]\n  A --&gt; D[Bayesian]\n  A --&gt; E[Statistical learning]\n  \n  B --&gt; F[Central tendency]\n  B --&gt; G[Distribution]\n  B --&gt; H[Plot]\n\n  C --&gt; I[T-test]\n  C --&gt; J[ANOVA]\n\n  E --&gt; K[AI]\n  E --&gt; L[NN]"
+    "text": "Statistic tools Family\n\n\n\n\n\n\ngraph TD\n  A[Statistics] --&gt; B[Descriptive]\n  A --&gt; C[Inferential]\n  A --&gt; D[Bayesian]\n  A --&gt; E[Statistical learning]\n  \n  B --&gt; F[Central tendency]\n  B --&gt; G[Distribution]\n  B --&gt; H[Plot]\n\n  C --&gt; I[T-test]\n  C --&gt; J[ANOVA]\n\n  E --&gt; K[AI]\n  E --&gt; L[NN]"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#drug-testing",
@@ -25,7 +25,105 @@
     "href": "years/2024/topics/topic02/slides.html#statistical-inference",
     "title": "Inferential statistics (Statistical Testing)",
     "section": "Statistical inference",
-    "text": "Statistical inference\n\n\n{{&lt; fa magnifying-glass size=2x &gt;}}\nObserve  Sample\n\n\n{{&lt; fa arrow-right size=2x &gt;}}\n\n\n{{&lt; fa mortar-pestle size=2x &gt;}}\nInfer  Population"
+    "text": "Statistical inference\n\n\n\nObserve  Sample\n\n\n——&gt;\n\n\nInfer  Population"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#hypothesis-testing-statistical-inference",
+    "href": "years/2024/topics/topic02/slides.html#hypothesis-testing-statistical-inference",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Hypothesis testing: statistical inference",
+    "text": "Hypothesis testing: statistical inference\n\nConvert the research hypothesis to null hypothesis and try to disprove. The decide which test & tails to be used.\ndecide on a significance level – the probability with which we are prepared to make a wrong decision if the null hypothesis is true.\nExperimental design & do data collection\nPerform requirement check then Calculate p-value\nCompare p-value with a significance level then end up either accepting or rejecting the null hypothesis.\nInterpretation"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#state-the-hypothesis",
+    "href": "years/2024/topics/topic02/slides.html#state-the-hypothesis",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "State the hypothesis",
+    "text": "State the hypothesis\n\nParameters\n\nmean \\((\\mu)\\)\nstandard variation \\((\\sigma)\\)\ndistribution\n\nAlternative relationship\n\nnot equal \\((\\neq)\\) - two tail\ngreater than \\((\\gt)\\) - one tail\nlower than \\((\\lt)\\) - one tail"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#hypotheses",
+    "href": "years/2024/topics/topic02/slides.html#hypotheses",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\n\n\n\n\n\n\n\nNull (not-sig: true)\nAlternative (sig: true)\n\n\n\n\n\\(\\mu = 15\\)\n\\(\\mu \\neq 15\\)\n\n\n\\(\\mu \\leq 15\\)\n\\(\\mu \\gt 15\\)\n\n\n\\(\\mu_1 = \\mu_2\\)\n\\(\\mu_1 \\neq \\mu_2\\)\n\n\n\\(\\mu_1 \\geq \\mu_2\\)\n\\(\\mu_1 \\lt \\mu_2\\)\n\n\n\\(\\mu_1 = \\mu_2 = \\mu_3 ...\\)\n\\(\\mu_1 \\neq \\mu_2, \\mu_1 \\neq \\mu_3 ...\\)"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#choose-the-test-parametric-and-non-parametric",
+    "href": "years/2024/topics/topic02/slides.html#choose-the-test-parametric-and-non-parametric",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Choose the test: Parametric and non-parametric",
+    "text": "Choose the test: Parametric and non-parametric\n\n\nParametric\n\ntest based on parameterized distributions\n\nT-Test\nANOVA\n\nMore strictness\nRequirement check\n\n\nNon parametric\n\nnot based on parameterized distributions\n\nMann-Whitney\nKruskal-Wallis\n\nLess strictness\nNo requirement"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#decide-the-significant-level",
+    "href": "years/2024/topics/topic02/slides.html#decide-the-significant-level",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Decide the significant level",
+    "text": "Decide the significant level\n \n\n\n\n\nnull hypothesis is true\nnull hypothesis is false\n\n\n\n\naccept null hypothesis\nGood\nType II (\\(\\beta\\)) error\n\n\nreject null hypothesis\nType I (\\(\\alpha\\)) error\nGood"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#choosing-the-test",
+    "href": "years/2024/topics/topic02/slides.html#choosing-the-test",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Choosing the test",
+    "text": "Choosing the test\n\nChoosing the test based on the hypothesis\nDecide on the significant level & collect the data\nChoose the parametric first\nChecking the assumption of the test\nCalculate p-value, confidence limit\nAccept or reject null hypothesis"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#p-value",
+    "href": "years/2024/topics/topic02/slides.html#p-value",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "P-Value",
+    "text": "P-Value"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#wrong-interpretation-of-p-value",
+    "href": "years/2024/topics/topic02/slides.html#wrong-interpretation-of-p-value",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Wrong interpretation of P-Value",
+    "text": "Wrong interpretation of P-Value\nWhen the same hypothesis is tested in different studies; if P of Drug ‘A’ is smaller than drug ‘B’, then drug ‘A’ is more effective than drug ‘b’."
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#choosing-statistic-testing",
+    "href": "years/2024/topics/topic02/slides.html#choosing-statistic-testing",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "choosing Statistic Testing",
+    "text": "choosing Statistic Testing\n\ntype of parameter: mean, variance, distribution, proportion\nnumber of sample group: one, two, more\ntype of variable: focus on continuous\nnumber of independent variable: focus on one\nnumber of dependent variable: focus on one\nparametric vs non parametric"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#testing-of-mean-1-sample",
+    "href": "years/2024/topics/topic02/slides.html#testing-of-mean-1-sample",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Testing of Mean 1 sample",
+    "text": "Testing of Mean 1 sample\n\n\n\nnormal ?\nextra requirement\ntest to use\n\n\n\n\nyes\nN/A\none sample T-Test of mean\n\n\nno\nN/A\nMann-Whitney U"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#testing-of-mean-2-samples",
+    "href": "years/2024/topics/topic02/slides.html#testing-of-mean-2-samples",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Testing of Mean 2 samples",
+    "text": "Testing of Mean 2 samples\n\n\n\n\n\n\n\n\nnormal ?\nextra requirement\ntest to use\n\n\n\n\nyes\nsample pair\npaired T-Test of mean\n\n\nno\nsample pair\nWilcoxon signed rank test\n\n\nyes\nequal variance\ntwo sample T-Test of mean of equal variance\n\n\nyes\nnonequal variance\ntwo sample T-Test of mean of non equal variance\n\n\nno\nN/A\nWilcoxon rank-sum test"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#testing-of-mean-more-samples",
+    "href": "years/2024/topics/topic02/slides.html#testing-of-mean-more-samples",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Testing of Mean more samples",
+    "text": "Testing of Mean more samples\n\n\n\nnormal ?\nextra requirement\ntest to use\n\n\n\n\nyes\nN/A\nOne-Way ANOVA\n\n\nno\nN/A\nKruskal-Wallis test"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#testing-of-variance",
+    "href": "years/2024/topics/topic02/slides.html#testing-of-variance",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Testing of Variance",
+    "text": "Testing of Variance\n\nBartlett Test of Homogeneity of Variances"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#testing-of-distribution",
+    "href": "years/2024/topics/topic02/slides.html#testing-of-distribution",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "Testing of Distribution",
+    "text": "Testing of Distribution\n\nShapiro-Wilk test of normality"
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#library-installation",
@@ -77,6 +175,13 @@
     "text": "Bartlett Test of Homogeneity of Variances\n\\[ H_0 : Var_{diabetes} = Var_{nondiabetes} \\] \\[ H_1 : Var_{diabetes} \\neq Var_{nondiabetes} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  bartlett.test(BMI~Diabetes, data=.)\n\n\n    Bartlett test of homogeneity of variances\n\ndata:  BMI by Diabetes\nBartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07"
   },
   {
+    "objectID": "years/2024/topics/topic02/slides.html#t-test-for-a-population-mean-variance-unknown",
+    "href": "years/2024/topics/topic02/slides.html#t-test-for-a-population-mean-variance-unknown",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "t-test for a population mean (variance unknown)",
+    "text": "t-test for a population mean (variance unknown)\n\nObject\n\nTo investigate the significance of the difference between an assumed population mean μ0 and a sample mean x ̄.\n\nLimitations\n\nIf the variance of the population σ 2 is known, a more powerful test is available: the Z-test for a population mean (Test 1).\nThe test is accurate if the population is normally distributed. If the population is not normal, the test will give an approximate guide.\n\nExample: Most of diabetic patient are overweight"
+  },
+  {
     "objectID": "years/2024/topics/topic02/slides.html#one-sample-t-test",
     "href": "years/2024/topics/topic02/slides.html#one-sample-t-test",
     "title": "Inferential statistics (Statistical Testing)",
@@ -98,11 +203,25 @@
     "text": "one sample T Test: superiority test\n\\[ H_0 : \\mu_{BMI_{diabetic}} \\leq 25 \\] \\[ H_1 : \\mu_{BMI_{diabetic}} &gt; 25 \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(response = BMI, mu = 25, alternative = \"greater\")\n\n# A tibble: 1 × 7\n  statistic  t_df   p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1      32.8  3675 1.92e-207 greater         28.5     28.4      Inf"
   },
   {
+    "objectID": "years/2024/topics/topic02/slides.html#t-test-for-two-population-means-variances-unknown-but-equal",
+    "href": "years/2024/topics/topic02/slides.html#t-test-for-two-population-means-variances-unknown-but-equal",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "t-test for two population means (variances unknown but equal)",
+    "text": "t-test for two population means (variances unknown but equal)\n\nObject\n\nTo investigate the significance of the difference between the means of two populations.\n\nLimitations\n\nIf the variance of the populations is known, a more powerful test is available: the Z-test for two population means (Test 2).\nThe test is accurate if the populations are normally distributed. If the populations are not normal, the test will give an approximate guide."
+  },
+  {
     "objectID": "years/2024/topics/topic02/slides.html#two-sample-t-test-equal-variance-two-tail",
     "href": "years/2024/topics/topic02/slides.html#two-sample-t-test-equal-variance-two-tail",
     "title": "Inferential statistics (Statistical Testing)",
     "section": "two sample T Test: equal variance, two-tail",
     "text": "two sample T Test: equal variance, two-tail\n\\[ H_0 : \\mu_{BMI_{diabetic}} = \\mu_{BMI_{nondiabetic}} \\] \\[ H_1 : \\mu_{BMI_{diabetic}} \\neq \\mu_{BMI_{nondiabetic}} \\]\n\nnh %&gt;% \n  filter(Age&gt;=18) %&gt;% \n  t_test(formula = BMI~Diabetes, , var.equal=TRUE)\n\n# A tibble: 1 × 7\n  statistic  t_df  p_value alternative estimate lower_ci upper_ci\n      &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;\n1     -13.3  3674 2.88e-39 two.sided      -4.74    -5.45    -4.04"
+  },
+  {
+    "objectID": "years/2024/topics/topic02/slides.html#t-test-for-two-population-means-variances-unknown-and-unequal",
+    "href": "years/2024/topics/topic02/slides.html#t-test-for-two-population-means-variances-unknown-and-unequal",
+    "title": "Inferential statistics (Statistical Testing)",
+    "section": "t-test for two population means (variances unknown and unequal)",
+    "text": "t-test for two population means (variances unknown and unequal)\n\nObject\n\nTo investigate the significance of the difference between the means of two populations.\n\nLimitations\n\nIf the variances of the populations are known, a more powerful test is available: the Z-test for two population means (Test 3).\nThe test is approximate if the populations are normally distributed or if the sample sizes are sufficiently large.\nThe test should only be used to test the hypothesis μ1 = μ2."
   },
   {
     "objectID": "years/2024/topics/topic02/slides.html#two-sample-t-test-not-equal-variance-two-tail",

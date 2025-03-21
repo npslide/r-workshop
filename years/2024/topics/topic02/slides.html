@@ -247,22 +247,8 @@ Natapol Pornputtapong, PhD.
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Wikipedia; Romijn, Jan-Willem (2014). “Philosophy of statistics”. Stanford Encyclopedia of Philosophy.</p></li></ol></aside></section>
 <section id="statistic-tools-family" class="slide level2">
 <h2>Statistic tools Family</h2>
+<p><br><br></p>
 <div class="cell" data-reveal="true" data-layout-align="default">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>graph TD</span>
-<span id="cb1-2"><a></a>  A[Statistics] --&gt; B[Descriptive]</span>
-<span id="cb1-3"><a></a>  A --&gt; C[Inferential]</span>
-<span id="cb1-4"><a></a>  A --&gt; D[Bayesian]</span>
-<span id="cb1-5"><a></a>  A --&gt; E[Statistical learning]</span>
-<span id="cb1-6"><a></a>  </span>
-<span id="cb1-7"><a></a>  B --&gt; F[Central tendency]</span>
-<span id="cb1-8"><a></a>  B --&gt; G[Distribution]</span>
-<span id="cb1-9"><a></a>  B --&gt; H[Plot]</span>
-<span id="cb1-10"><a></a></span>
-<span id="cb1-11"><a></a>  C --&gt; I[T-test]</span>
-<span id="cb1-12"><a></a>  C --&gt; J[ANOVA]</span>
-<span id="cb1-13"><a></a></span>
-<span id="cb1-14"><a></a>  E --&gt; K[AI]</span>
-<span id="cb1-15"><a></a>  E --&gt; L[NN]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
@@ -306,19 +292,270 @@ Natapol Pornputtapong, PhD.
 </section>
 <section id="statistical-inference" class="slide level2">
 <h2>Statistical inference</h2>
+<p><br><br></p>
 <div class="r-hstack">
-<div class="contentbox">
-{{&lt; fa magnifying-glass size=2x &gt;}}
+<div style="backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); background-color: #99BC85; color: white; border-radius: 20px; text-align: center; aspect-ratio: 1 / 1;width: 200px; margin: auto;font-size: 2vw; margin: auto;">
 <p>Observe <br> <strong>Sample</strong></p>
 </div>
 <div>
-{{&lt; fa arrow-right size=2x &gt;}}
+<p><strong>——&gt;</strong></p>
 </div>
-<div class="contentbox">
-{{&lt; fa mortar-pestle size=2x &gt;}}
+<div style="backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); background-color: #99BC85; color: white; border-radius: 20px; text-align: center; aspect-ratio: 1 / 1;width: 200px; margin: auto; font-size: 2vw">
 <p>Infer <br> <strong>Population</strong></p>
 </div>
 </div>
+</section>
+<section id="hypothesis-testing-statistical-inference" class="slide level2 scrollable">
+<h2>Hypothesis testing: statistical inference</h2>
+<ol type="1">
+<li>Convert the <strong>research hypothesis to null hypothesis</strong> and try to disprove. The decide which test &amp; tails to be used.</li>
+<li>decide on a <strong>significance level</strong> – the probability with which we are prepared to make a wrong decision if the null hypothesis is true.</li>
+<li>Experimental design &amp; do data collection</li>
+<li>Perform <strong>requirement check</strong> then <strong>Calculate p-value</strong></li>
+<li><strong>Compare p-value</strong> with a significance level then end up either accepting or rejecting the null hypothesis.</li>
+<li>Interpretation</li>
+</ol>
+</section>
+<section id="state-the-hypothesis" class="slide level2">
+<h2>State the hypothesis</h2>
+<ul>
+<li>Parameters
+<ul>
+<li>mean <span class="math inline">\((\mu)\)</span></li>
+<li>standard variation <span class="math inline">\((\sigma)\)</span></li>
+<li>distribution</li>
+</ul></li>
+<li>Alternative relationship
+<ul>
+<li>not equal <span class="math inline">\((\neq)\)</span> - two tail</li>
+<li>greater than <span class="math inline">\((\gt)\)</span> - one tail</li>
+<li>lower than <span class="math inline">\((\lt)\)</span> - one tail</li>
+</ul></li>
+</ul>
+</section>
+<section id="hypotheses" class="slide level2">
+<h2>Hypotheses</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Null (not-sig: true)</th>
+<th style="text-align: left;">Alternative (sig: true)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mu = 15\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mu \neq 15\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\mu \leq 15\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mu \gt 15\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mu_1 = \mu_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mu_1 \neq \mu_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\mu_1 \geq \mu_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mu_1 \lt \mu_2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mu_1 = \mu_2 = \mu_3 ...\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mu_1 \neq \mu_2, \mu_1 \neq \mu_3 ...\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="choose-the-test-parametric-and-non-parametric" class="slide level2">
+<h2>Choose the test: Parametric and non-parametric</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Parametric</strong></p>
+<ul>
+<li>test based on parameterized distributions
+<ul>
+<li>T-Test</li>
+<li>ANOVA</li>
+</ul></li>
+<li>More strictness</li>
+<li>Requirement check</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Non parametric</strong></p>
+<ul>
+<li>not based on parameterized distributions
+<ul>
+<li>Mann-Whitney</li>
+<li>Kruskal-Wallis</li>
+</ul></li>
+<li>Less strictness</li>
+<li>No requirement</li>
+</ul>
+</div></div>
+</section>
+<section id="decide-the-significant-level" class="slide level2">
+<h2>Decide the significant level</h2>
+<p><br> <br></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>null hypothesis is true</th>
+<th>null hypothesis is false</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>accept null hypothesis</td>
+<td>Good</td>
+<td>Type II (<span class="math inline">\(\beta\)</span>) error</td>
+</tr>
+<tr class="even">
+<td>reject null hypothesis</td>
+<td>Type I (<span class="math inline">\(\alpha\)</span>) error</td>
+<td>Good</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="choosing-the-test" class="slide level2 scrollable">
+<h2>Choosing the test</h2>
+<ol type="1">
+<li>Choosing the test based on the hypothesis</li>
+<li>Decide on the significant level &amp; collect the data</li>
+<li>Choose the parametric first</li>
+<li>Checking the assumption of the test</li>
+<li>Calculate p-value, confidence limit</li>
+<li>Accept or reject null hypothesis</li>
+</ol>
+</section>
+<section id="p-value" class="slide level2">
+<h2>P-Value</h2>
+
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="img-fluid r-stretch" width="960"></section>
+<section id="wrong-interpretation-of-p-value" class="slide level2">
+<h2>Wrong interpretation of P-Value</h2>
+<p>When the same hypothesis is tested in different studies; if P of Drug ‘A’ is smaller than drug ‘B’, then drug ‘A’ is more effective than drug ‘b’.</p>
+</section>
+<section id="choosing-statistic-testing" class="slide level2">
+<h2>choosing Statistic Testing</h2>
+<ul>
+<li><strong>type of parameter</strong>: mean, variance, distribution, proportion</li>
+<li><strong>number of sample group</strong>: one, two, more</li>
+<li><strong>type of variable</strong>: focus on continuous</li>
+<li><strong>number of independent variable</strong>: focus on one</li>
+<li><strong>number of dependent variable</strong>: focus on one</li>
+<li><strong>parametric vs non parametric</strong></li>
+</ul>
+</section>
+<section id="testing-of-mean-1-sample" class="slide level2">
+<h2>Testing of Mean 1 sample</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>normal ?</th>
+<th>extra requirement</th>
+<th>test to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>yes</td>
+<td>N/A</td>
+<td>one sample T-Test of mean</td>
+</tr>
+<tr class="even">
+<td>no</td>
+<td>N/A</td>
+<td>Mann-Whitney U</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="testing-of-mean-2-samples" class="slide level2">
+<h2>Testing of Mean 2 samples</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 33%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>normal ?</th>
+<th>extra requirement</th>
+<th>test to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>yes</td>
+<td>sample pair</td>
+<td>paired T-Test of mean</td>
+</tr>
+<tr class="even">
+<td>no</td>
+<td>sample pair</td>
+<td>Wilcoxon signed rank test</td>
+</tr>
+<tr class="odd">
+<td>yes</td>
+<td>equal variance</td>
+<td>two sample T-Test of mean of equal variance</td>
+</tr>
+<tr class="even">
+<td>yes</td>
+<td>nonequal variance</td>
+<td>two sample T-Test of mean of non equal variance</td>
+</tr>
+<tr class="odd">
+<td>no</td>
+<td>N/A</td>
+<td>Wilcoxon rank-sum test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="testing-of-mean-more-samples" class="slide level2">
+<h2>Testing of Mean more samples</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>normal ?</th>
+<th>extra requirement</th>
+<th>test to use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>yes</td>
+<td>N/A</td>
+<td>One-Way ANOVA</td>
+</tr>
+<tr class="even">
+<td>no</td>
+<td>N/A</td>
+<td>Kruskal-Wallis test</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="testing-of-variance" class="slide level2">
+<h2>Testing of Variance</h2>
+<ul>
+<li>Bartlett Test of Homogeneity of Variances</li>
+</ul>
+</section>
+<section id="testing-of-distribution" class="slide level2">
+<h2>Testing of Distribution</h2>
+<ul>
+<li>Shapiro-Wilk test of normality</li>
+</ul>
 </section>
 <section id="library-installation" class="slide level2">
 <h2>library installation</h2>
@@ -338,8 +575,8 @@ Natapol Pornputtapong, PhD.
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-2"><a></a><span class="fu">install.packages</span>(<span class="st">"tidymodels"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-2"><a></a><span class="fu">install.packages</span>(<span class="st">"tidymodels"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="calling-library" class="slide level2">
@@ -347,8 +584,8 @@ Natapol Pornputtapong, PhD.
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -500,8 +737,8 @@ Natapol Pornputtapong, PhD.
 <section id="import-data-to-tibbles" class="slide level2">
 <h2>import data to tibbles</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>nh <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">"nhanes.csv"</span>)</span>
-<span id="cb4-2"><a></a>nh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>nh <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file=</span><span class="st">"nhanes.csv"</span>)</span>
+<span id="cb3-2"><a></a>nh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5,000 × 32
       id Gender   Age Race    Education MaritalStatus RelationshipStatus Insured
@@ -529,17 +766,17 @@ Natapol Pornputtapong, PhD.
 <section id="view-tibbles" class="slide level2">
 <h2>view tibbles</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">View</span>(nh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">View</span>(nh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="normality-test-shapiro-wilk-test-of-normality" class="slide level2">
 <h2>normality test: Shapiro-Wilk test of normality</h2>
 <p><span class="math display">\[ H_0 : data distribution = normal distribution \]</span> <span class="math display">\[ H_1 : data distribution \neq normal distribution \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a></a>  <span class="fu">filter</span>(Diabetes<span class="sc">==</span><span class="st">"Yes"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb7-3"><a></a>  .<span class="sc">$</span>BMI  <span class="sc">%&gt;%</span> </span>
-<span id="cb7-4"><a></a>  shapiro.test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(Diabetes<span class="sc">==</span><span class="st">"Yes"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a></a>  .<span class="sc">$</span>BMI  <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a></a>  shapiro.test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Shapiro-Wilk normality test
@@ -553,9 +790,9 @@ W = 0.96682, p-value = 2.166e-07</code></pre>
 <h2>Bartlett Test of Homogeneity of Variances</h2>
 <p><span class="math display">\[ H_0 : Var_{diabetes} = Var_{nondiabetes} \]</span> <span class="math display">\[ H_1 : Var_{diabetes} \neq Var_{nondiabetes} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-3"><a></a>  <span class="fu">bartlett.test</span>(BMI<span class="sc">~</span>Diabetes, <span class="at">data=</span>.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">bartlett.test</span>(BMI<span class="sc">~</span>Diabetes, <span class="at">data=</span>.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Bartlett test of homogeneity of variances
@@ -565,13 +802,28 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 </div>
 </div>
 </section>
+<section id="t-test-for-a-population-mean-variance-unknown" class="slide level2 scrollable">
+<h2>t-test for a population mean (variance unknown)</h2>
+<ul>
+<li>Object
+<ul>
+<li>To investigate the significance of the difference between an assumed population mean μ0 and a sample mean x ̄.</li>
+</ul></li>
+<li>Limitations
+<ol type="1">
+<li>If the variance of the population σ 2 is known, a more powerful test is available: the Z-test for a population mean (Test 1).</li>
+<li>The test is accurate if the population is normally distributed. If the population is not normal, the test will give an approximate guide.</li>
+</ol></li>
+<li>Example: Most of diabetic patient are overweight</li>
+</ul>
+</section>
 <section id="one-sample-t-test" class="slide level2">
 <h2>one sample T Test</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} = 25 \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} \neq 25 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df   p_value alternative estimate lower_ci upper_ci
@@ -584,9 +836,9 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 <h2>one sample T Test: inferiority test</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} \geq 25 \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} &lt; 25 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>, <span class="at">alternative =</span> <span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>, <span class="at">alternative =</span> <span class="st">"less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df p_value alternative estimate lower_ci upper_ci
@@ -599,9 +851,9 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 <h2>one sample T Test: superiority test</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} \leq 25 \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} &gt; 25 \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a></a>  <span class="fu">t_test</span>(<span class="at">response =</span> BMI, <span class="at">mu =</span> <span class="dv">25</span>, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df   p_value alternative estimate lower_ci upper_ci
@@ -610,13 +862,27 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 </div>
 </div>
 </section>
+<section id="t-test-for-two-population-means-variances-unknown-but-equal" class="slide level2 scrollable">
+<h2>t-test for two population means (variances unknown but equal)</h2>
+<ul>
+<li>Object
+<ul>
+<li>To investigate the significance of the difference between the means of two populations.</li>
+</ul></li>
+<li>Limitations
+<ol type="1">
+<li>If the variance of the populations is known, a more powerful test is available: the Z-test for two population means (Test 2).</li>
+<li>The test is accurate if the populations are normally distributed. If the populations are not normal, the test will give an approximate guide.</li>
+</ol></li>
+</ul>
+</section>
 <section id="two-sample-t-test-equal-variance-two-tail" class="slide level2">
 <h2>two sample T Test: equal variance, two-tail</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} = \mu_{BMI_{nondiabetic}} \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} \neq \mu_{BMI_{nondiabetic}} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb17-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-3"><a></a>  <span class="fu">t_test</span>(<span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, , <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a></a>  <span class="fu">t_test</span>(<span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, , <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df  p_value alternative estimate lower_ci upper_ci
@@ -625,13 +891,28 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 </div>
 </div>
 </section>
+<section id="t-test-for-two-population-means-variances-unknown-and-unequal" class="slide level2 scrollable">
+<h2>t-test for two population means (variances unknown and unequal)</h2>
+<ul>
+<li>Object
+<ul>
+<li>To investigate the significance of the difference between the means of two populations.</li>
+</ul></li>
+<li>Limitations
+<ol type="1">
+<li>If the variances of the populations are known, a more powerful test is available: the Z-test for two population means (Test 3).</li>
+<li>The test is approximate if the populations are normally distributed or if the sample sizes are sufficiently large.</li>
+<li>The test should only be used to test the hypothesis μ1 = μ2.</li>
+</ol></li>
+</ul>
+</section>
 <section id="two-sample-t-test-not-equal-variance-two-tail" class="slide level2">
 <h2>two sample T Test: not equal variance, two-tail</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} = \mu_{BMI_{nondiabetic}} \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} \neq \mu_{BMI_{nondiabetic}} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a></a>  <span class="fu">t_test</span>(<span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, , <span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a></a>  <span class="fu">t_test</span>(<span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, , <span class="at">var.equal=</span><span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df  p_value alternative estimate lower_ci upper_ci
@@ -644,14 +925,14 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 <h2>two sample T Test: not equal variance, one-tail</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{diabetic}} \leq \mu_{BMI_{nondiabetic}} \]</span> <span class="math display">\[ H_1 : \mu_{BMI_{diabetic}} &gt; \mu_{BMI_{nondiabetic}} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb21-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb21-3"><a></a>  <span class="fu">t_test</span>(</span>
-<span id="cb21-4"><a></a>    <span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, </span>
-<span id="cb21-5"><a></a>    <span class="at">alternative=</span><span class="st">"greater"</span>, </span>
-<span id="cb21-6"><a></a>    <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),</span>
-<span id="cb21-7"><a></a>    <span class="at">var.equal=</span><span class="cn">FALSE</span></span>
-<span id="cb21-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a></a>  <span class="fu">t_test</span>(</span>
+<span id="cb20-4"><a></a>    <span class="at">formula =</span> BMI<span class="sc">~</span>Diabetes, </span>
+<span id="cb20-5"><a></a>    <span class="at">alternative=</span><span class="st">"greater"</span>, </span>
+<span id="cb20-6"><a></a>    <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>),</span>
+<span id="cb20-7"><a></a>    <span class="at">var.equal=</span><span class="cn">FALSE</span></span>
+<span id="cb20-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 7
   statistic  t_df  p_value alternative estimate lower_ci upper_ci
@@ -663,9 +944,9 @@ Bartlett's K-squared = 25.828, df = 1, p-value = 3.733e-07</code></pre>
 <section id="wilcoxon-rank-sum-test-a.k.a.-mann-whitney-u-test" class="slide level2">
 <h2>Wilcoxon rank-sum test (a.k.a. Mann-Whitney U test)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb23-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-3"><a></a>  <span class="fu">wilcox.test</span>(BMI<span class="sc">~</span>Diabetes, <span class="at">data=</span>.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb22-2"><a></a>  <span class="fu">filter</span>(Age<span class="sc">&gt;=</span><span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a></a>  <span class="fu">wilcox.test</span>(BMI<span class="sc">~</span>Diabetes, <span class="at">data=</span>.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Wilcoxon rank sum test with continuity correction
@@ -684,7 +965,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <section id="comparing-bmi-among-race" class="slide level2">
 <h2>comparing BMI among Race</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>nh<span class="sc">$</span>Race <span class="sc">%&gt;%</span> unique</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>nh<span class="sc">$</span>Race <span class="sc">%&gt;%</span> unique</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Asian"    "Black"    "White"    "Mexican"  "Hispanic" "Other"   </code></pre>
 </div>
@@ -693,19 +974,19 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <section id="preparing-data" class="slide level2">
 <h2>preparing data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>nhaov <span class="ot">&lt;-</span> nh <span class="sc">%&gt;%</span> </span>
-<span id="cb27-2"><a></a>  <span class="fu">filter</span>(Race<span class="sc">!=</span><span class="st">"Other"</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(Diabetes) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(BMI)) <span class="sc">%&gt;%</span> </span>
-<span id="cb27-3"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb27-4"><a></a>    <span class="at">Race =</span> <span class="fu">factor</span>(</span>
-<span id="cb27-5"><a></a>      Race, </span>
-<span id="cb27-6"><a></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Asian"</span>, <span class="st">"Black"</span>, <span class="st">"White"</span>, <span class="st">"Mexican"</span>, <span class="st">"Hispanic"</span>)</span>
-<span id="cb27-7"><a></a>    ),</span>
-<span id="cb27-8"><a></a>    <span class="at">Diabetes =</span> <span class="fu">factor</span>(</span>
-<span id="cb27-9"><a></a>      Diabetes, </span>
-<span id="cb27-10"><a></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)</span>
-<span id="cb27-11"><a></a>    )</span>
-<span id="cb27-12"><a></a>  )</span>
-<span id="cb27-13"><a></a>nhaov</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>nhaov <span class="ot">&lt;-</span> nh <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a></a>  <span class="fu">filter</span>(Race<span class="sc">!=</span><span class="st">"Other"</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(Diabetes) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(BMI)) <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-4"><a></a>    <span class="at">Race =</span> <span class="fu">factor</span>(</span>
+<span id="cb26-5"><a></a>      Race, </span>
+<span id="cb26-6"><a></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Asian"</span>, <span class="st">"Black"</span>, <span class="st">"White"</span>, <span class="st">"Mexican"</span>, <span class="st">"Hispanic"</span>)</span>
+<span id="cb26-7"><a></a>    ),</span>
+<span id="cb26-8"><a></a>    <span class="at">Diabetes =</span> <span class="fu">factor</span>(</span>
+<span id="cb26-9"><a></a>      Diabetes, </span>
+<span id="cb26-10"><a></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Yes"</span>, <span class="st">"No"</span>)</span>
+<span id="cb26-11"><a></a>    )</span>
+<span id="cb26-12"><a></a>  )</span>
+<span id="cb26-13"><a></a>nhaov</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4,681 × 32
       id Gender   Age Race    Education MaritalStatus RelationshipStatus Insured
@@ -733,21 +1014,21 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <section id="box-plot" class="slide level2">
 <h2>box plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>nhaov  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="co"># add the data</span></span>
-<span id="cb29-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span> BMI, <span class="co"># set x, y coordinates</span></span>
-<span id="cb29-3"><a></a>           <span class="at">color =</span> Race)) <span class="sc">+</span>    <span class="co"># color by treatment</span></span>
-<span id="cb29-4"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb29-5"><a></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Diabetes) <span class="co"># create panes base on health status</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>nhaov  <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="at">data =</span> ., <span class="co"># add the data</span></span>
+<span id="cb28-2"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> Race, <span class="at">y =</span> BMI, <span class="co"># set x, y coordinates</span></span>
+<span id="cb28-3"><a></a>           <span class="at">color =</span> Race)) <span class="sc">+</span>    <span class="co"># color by treatment</span></span>
+<span id="cb28-4"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb28-5"><a></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>Diabetes) <span class="co"># create panes base on health status</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid r-stretch" width="960"></section>
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid r-stretch" width="960"></section>
 <section id="summarize-by-group" class="slide level2">
 <h2>summarize by group</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>nhaov <span class="sc">%&gt;%</span>   </span>
-<span id="cb30-2"><a></a>  <span class="fu">group_by</span>(Race, Diabetes) <span class="sc">%&gt;%</span>  </span>
-<span id="cb30-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(BMI)) <span class="sc">%&gt;%</span></span>
-<span id="cb30-4"><a></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>nhaov <span class="sc">%&gt;%</span>   </span>
+<span id="cb29-2"><a></a>  <span class="fu">group_by</span>(Race, Diabetes) <span class="sc">%&gt;%</span>  </span>
+<span id="cb29-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(BMI)) <span class="sc">%&gt;%</span></span>
+<span id="cb29-4"><a></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
    Race     Diabetes  mean
@@ -769,9 +1050,9 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <h2>Analysis of Varience</h2>
 <p><span class="math display">\[ H_0 : \mu_{BMI_{Asian}} = \mu_{BMI_{Black}} = \mu_{BMI_{White}} = \mu_{BMI_{Mexican}} = \mu_{BMI_{Hispanic}} \]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
-<span id="cb32-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
-<span id="cb32-3"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
+<span id="cb31-3"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              Df Sum Sq Mean Sq F value  Pr(&gt;F)    
 Race           4   3073   768.2   14.77 5.4e-12 ***
@@ -784,9 +1065,9 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="post-hoc" class="slide level2">
 <h2>Post-hoc</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
-<span id="cb34-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
-<span id="cb34-3"><a></a>  <span class="fu">TukeyHSD</span>(<span class="at">which=</span><span class="st">"Race"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
+<span id="cb33-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
+<span id="cb33-3"><a></a>  <span class="fu">TukeyHSD</span>(<span class="at">which=</span><span class="st">"Race"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Tukey multiple comparisons of means
     95% family-wise confidence level
@@ -811,10 +1092,10 @@ Hispanic-Mexican  0.4718364 -0.5202607  1.46393347 0.6925947</code></pre>
 <section id="tidy-post-hoc" class="slide level2">
 <h2>tidy Post-hoc</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
-<span id="cb36-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
-<span id="cb36-3"><a></a>  <span class="fu">TukeyHSD</span>(<span class="at">which=</span><span class="st">"Race"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb36-4"><a></a>  tidy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>nhaov <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a></a>  <span class="fu">aov</span>(BMI<span class="sc">~</span>Race, <span class="at">data=</span>. ) <span class="sc">%&gt;%</span></span>
+<span id="cb35-3"><a></a>  <span class="fu">TukeyHSD</span>(<span class="at">which=</span><span class="st">"Race"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb35-4"><a></a>  tidy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 7
    term  contrast         null.value estimate conf.low conf.high  adj.p.value
@@ -865,19 +1146,19 @@ Hispanic-Mexican  0.4718364 -0.5202607  1.46393347 0.6925947</code></pre>
 <section id="plot" class="slide level2">
 <h2>plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>nh <span class="sc">%&gt;%</span></span>
-<span id="cb38-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(BMI, Age)) <span class="sc">+</span> </span>
-<span id="cb38-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb38-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>nh <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(BMI, Age)) <span class="sc">+</span> </span>
+<span id="cb37-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb37-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-22-1.png" class="img-fluid r-stretch" width="960"></section>
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-23-1.png" class="img-fluid r-stretch" width="960"></section>
 <section id="fitting" class="slide level2">
 <h2>Fitting</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
-<span id="cb39-2"><a></a>  <span class="fu">lm</span>(BMI<span class="sc">~</span>Age , <span class="at">data=</span>.) <span class="sc">%&gt;%</span> </span>
-<span id="cb39-3"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>nh <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a></a>  <span class="fu">lm</span>(BMI<span class="sc">~</span>Age , <span class="at">data=</span>.) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-3"><a></a>  summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -904,12 +1185,12 @@ F-statistic:  1054 on 1 and 4832 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="model-diagnostics" class="slide level2">
 <h2>Model Diagnostics</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
-<span id="cb41-2"><a></a></span>
-<span id="cb41-3"><a></a>nh <span class="sc">%&gt;%</span> <span class="fu">lm</span>(BMI<span class="sc">~</span>Age , <span class="at">data=</span>.) <span class="sc">%&gt;%</span> plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb40-2"><a></a></span>
+<span id="cb40-3"><a></a>nh <span class="sc">%&gt;%</span> <span class="fu">lm</span>(BMI<span class="sc">~</span>Age , <span class="at">data=</span>.) <span class="sc">%&gt;%</span> plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="slides_files/figure-revealjs/unnamed-chunk-24-1.png" class="img-fluid r-stretch" width="960"></section>
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-25-1.png" class="img-fluid r-stretch" width="960"></section>
 <section id="references" class="slide level2">
 <h2>References</h2>
 <ul>
